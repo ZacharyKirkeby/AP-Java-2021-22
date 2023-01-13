@@ -1,0 +1,100 @@
+Instructions
+You are going to write a class from scratch that includes a constructor and toString method as well as instance variables and regular methods.
+
+You will write a class called Clock in the Clock.java file. This class will use two instance variables to keep track of the time (hours and minutes)
+
+It will have a constructor that takes two parameters that are used to initialize the instance variables.
+
+It will have a toString method that outputs the time like this: "The time is 9:12"
+
+It will have a method called tick that takes an int parameter and uses that value to increment the number of minutes. This method will also make sure that the hours are appropriately updated if minutes reaches (or passes) 60.
+
+Part 1: Class Header
+Write the class header for the Clock class.
+
+Part 2: Instance variables and Constructor
+Declare the instance variables for the Clock class.
+
+There should be two instance variables, one to store the current hour, and another to store the current minutes.
+
+What are appropriate names for these instance variables?
+
+What data type should these variables be declared as?
+
+The constructor should take two parameters that you use to initialize the instance variables.
+
+Make sure your code compiles.
+
+The ClockTester.java file has this code in it
+
+Clock c = new Clock(3, 30);
+    
+System.out.println( c );
+Which will create an instance of a Clock object with initial values of 3 hours and 30 minutes.
+
+Then it uses the System.out.println to output the value returned by the toString method.
+
+Note: when you pass an object to the System.out.println method as an argument, Java will automatically call the toString method on that object.
+
+But you haven't written the toString method yet! Because of some magic (that we will learn about later) every Java object has a toString method, even if you don't write one! However, the value that this magical toString method outputs is not particularly useful. It's mostly just a jumble of letters and numbers.
+
+Run the ClockTest.java file so you can see what I mean.
+
+Part 2: toString
+Write the toString method in this class. Remember, every toString method has the same exact header.
+
+The toString method for this class should output a string that contains the values of the instance variables like this:
+
+"The time is HH:SS" where HH and SS are replaced with the appropriate instance variable values.
+
+Some example outputs:
+
+The time is 10:30
+The time is 5:45
+The time is 7:05
+The time is 12:59
+You can change the arguments in the ClockTester.java file to test your toString method with different values.
+
+Make sure your toString method works correctly when the hours are only a single digit and when the minutes are only a single digit (see the examples above for what should be output)
+
+You may need to use an if-statement!
+
+Part 3: tik
+Write the tick method.
+
+This method does not return anything and it takes 1 parameter, an int value, that represents the number of minutes to advance the clock.
+
+Use the parameter to mutate the instance variable that holds the number of minutes.
+
+Your clock should work like a regular clock, so if the minutes reach or exceed 60, then the hour should be incremented by 1 and the minutes should reset to 0.
+
+If the hour reaches or exceeds 13, then it should be reset to 1.
+
+Make sure your code compiles.
+
+To test this code you will have to uncomment some code in the ClockTester.java file.
+
+Look for the code
+
+//c.tick(15);
+//System.out.println( c );
+    
+//c.tick(35);
+//System.out.println( c );
+Remove the // before each line so that it looks like this:
+
+c.tick(15);
+System.out.println( c );
+    
+c.tick(35);
+System.out.println( c );
+This code will call the tick method a couple times and output the value of toString so you can see how the state of the object has changed.
+
+When you run the code it should output:
+
+The time is 3:30
+The time is 3:45
+The time is 4:20
+Note: what happens if the clock is ticked by more than 60 minutes? Does your code work correctly if the following method is called?
+
+c.tick(150);
