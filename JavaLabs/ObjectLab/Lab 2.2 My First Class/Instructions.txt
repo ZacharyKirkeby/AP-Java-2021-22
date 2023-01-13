@@ -1,0 +1,117 @@
+Instructions
+You are going to write a class from scratch!
+
+Creating new classes is how you create new types of data. And you can define how that data is manipulated by adding methods to the class.
+
+Part 1: Class Header
+To write a class from scratch you need to define the class with a class header.
+
+public class NAME
+{
+}
+The name of the class must match the name of the file. If the file name is Foo.java then the class name will be Foo
+
+The rules for naming classes are the same as the rules for naming variables (letters, numbers, and _. Can't start with a number) but by convention we start class names with upper case letters. This makes it easy to visually identify the difference between a class name and a variable name when looking at code.
+
+foo   <-- a variable name (starts with lower case)
+Foo   <-- a class name (starts with upper case)
+In the Greeter.java file, write a class header. Make sure you use the correct name for the class. (Use the name of the file to determine the name of the class!)
+
+Also, notice there are no parentheses or semi-colons in the class header.
+
+Make sure your code compiles. It shouldn't do anything when it runs, but you also shouldn't get a compile-time error.
+
+To test your code, you will need to uncomment a line in the GreeterTester.java file.
+
+Find the line in GreeterTester.java that looks like this
+
+    //Greeter g = new Greeter();
+and remove the // to change it from a comment to an actual code statement.
+
+    Greeter g = new Greeter();
+Now, when you run your code, it will try to instantiate an instance of a Greeter object from the class you just created!
+
+Part 2: Writing a Method
+Now that you have declared a class, you can give that class behavior by declaring methods inside of it.
+
+You can declare any number of methods inside the body of the class header (in between the curly braces)
+
+Remember to indent your code!
+
+public class NAME
+{
+  /* METHODS GO HERE */
+}
+Methods have their own headers that describe the name of the method, the type of data the method returns, and any parameters that method takes.
+
+public void methodName(String param)
+{
+  /* code goes here */
+}
+The example above declares a method that does not return anything (void), it is named methodName, and it takes 1 parameter of type String.
+
+Here is what it looks like when you declare a method inside a class.
+
+public class NAME
+{
+  public void methodName(String param)
+  {
+    /* code goes here */
+  }
+}
+Notice that the code inside the class body is indented, and the comment inside the method body is indented even more. You can easily see which open and close curly braces match because they are at the same indentation level.
+
+In the class you are writing, add a method called sayHi that returns nothing (void) and takes no parameters.
+
+This method should use System.out.println to output the String "Hello"
+
+Note: This is one of the few methods you will write that uses System.out.println.
+
+Make sure you code compiles.
+
+To test your code, you will need to uncomment a line in the GreeterTester.java file.
+
+Find the line in GreeterTester.java that looks like this
+
+    //g.sayHi();
+and remove the // to change it from a comment to an actual code statement.
+
+    g.sayHi();
+Now, when you run your code, it will try to invoke the sayHi method that you just wrote. You should see the value "Hello" output to the console.
+
+Part 3: Writing a Method with a Parameter
+You can add as many methods as you need to a class. You will write another method in the Greeter class.
+
+This method will be called greet. It will return nothing (void) but it will take a single String parameter called name.
+
+This method should output the message "Hello [NAME]" where [NAME] is the value of the name parameter. Use the System.out.println method and concatenation to accomplish this.
+
+Remember, you should not assign a value to the parameter variable. The parameter is automatically assigned a value when the method is invoked. Its value comes from the argument that was passed in the method call.
+
+When you define a method, it goes inside the body of the class header but it should NOT go inside the body of another method.
+
+public class NAME
+{
+  public void firstMethod()
+  {
+    /* code goes here */
+  }
+  
+  public void secondMethod()
+  {
+    /* code goes here */
+  }
+}
+In the example above, there are two methods declared in the class. The order that you define the methods does not matter. The only thing that matters is that they are defined inside the body of the class, and NOT inside the body of another method.
+
+Make sure you code compiles.
+
+To test your code, you will need to uncomment a line in the GreeterTester.java file.
+
+Find the line in GreeterTester.java that looks like this
+
+    //g.greet("Cam Newton");
+and remove the // to change it from a comment to an actual code statement.
+
+    g.greet("Cam Newton");
+Now, when you run your code, it will try to invoke the greet method with the argument "Cam Newton". You should see the value "Hello Cam Newton" output to the console.
