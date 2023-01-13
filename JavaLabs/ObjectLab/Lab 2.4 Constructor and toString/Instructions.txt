@@ -1,0 +1,100 @@
+Instructions
+You are going to write a constructor and a toString method for a class that keeps track of and increments a number.
+
+This class is called Summer.java because it sums values.
+
+The starter code is setup with the basic functionality of the Summer.java file and some code in the SummerTester.java file.
+
+If you run the starter code, it should output
+
+0
+9
+Looking at the uncommented code in the SummerTester.java file
+
+Summer adder = new Summer();
+System.out.println( adder.getSum() );
+
+adder.add(9);
+System.out.println( adder.getSum() );
+You can see that this code creates an instance of a Summer object, then outputs the initial value of sum which is 0.
+
+Then it uses the add method to add the value 9 to that value.
+
+Then it outputs the value again, and it is 9.
+
+Part 1: Constructor
+You will add a constructor to the Summer.java file so that the user can choose what value the summer's instance value should start with.
+
+After you have created the constructor, the following code would be used to create an instance of a Summer object that starts with the value 14.
+
+Summer s = new Summer(14);
+The argument passed to the constructor is used to initialize the instance variable.
+
+Write the constructor in Summer.java. This constructor should take 1 int parameter and assign that value to the instance variable.
+
+Remember, a constructor is just like a regular method except for the following differences:
+
+The name of the constructor must match the name of the class (spelling and capitalization matter)
+Constructors do not have a return type (not even void!)
+These changes you made just made will cause an error in the SummerTester.java file. You need to make a change in that file so that your code will compile.
+
+In the SummerTester.java file, look for the code:
+
+Summer adder = new Summer();
+Change this line so that it passes the argument 0 to the constructor of the Summer class.
+
+Make sure your code compiles.
+
+To test your code, you will need to uncomment some lines from the SummerTester.java files.
+
+Look for the code:
+
+//Summer s = new Summer(5);
+    
+//s.add(3);
+//s.add(7);
+    
+//System.out.println( default.getSum() );
+Remove the // from the beginning of the lines so it looks like this
+
+Summer s = new Summer(5);
+    
+s.add(3);
+s.add(7);
+
+System.out.println( s.getSum() );
+When you run your code it should output
+
+0
+9
+15
+Part 2: Writing the toString Method
+The toString method creates and returns a string that describes the state (instance variables) of the object.
+
+Note: The toString method does NOT output anything (no System.out.println) it returns a String.
+
+The header of the toString method always looks the same
+
+public String toString()
+{
+}
+The body of the toString method should use concatenation to generate a String value that includes and describes the instance variables of the object.
+
+You will write a toString method for the Summer class that will return the string "The value is [VALUE]" where [VALUE] will be replaced by the actual value of the instance variable.
+
+For example, if the value of the instance variable is 24, then the toString method would return the String
+
+The value is 24
+Make sure your code compiles.
+
+To test your code you will have to uncomment a line of code in SummerTester.java.
+
+Look for the following line of code
+
+//System.out.println( s.toString() );
+Remove the // from the beginning of the line so it looks like this
+
+System.out.println( s.toString() );
+When you run the SummerTester.java file, the last line that outputs should be
+
+The value is 15
